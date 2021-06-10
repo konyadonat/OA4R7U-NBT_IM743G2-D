@@ -17,13 +17,13 @@
     <tbody>
         <?php foreach ($result as &$row): ?>
         <tr>
-            <td><?=$row['username']?></td>
-            <td><?=$row['name']?></td>
-            <td><?=$row['active']?></td>
+            <td><?=$row['nev']?></td>
+            <td><?=$row['szuletesiev']?></td>
+            <td><?=$row['konyvekszama']?></td>
             <td>
-                <a href="<?=BASE_URL?>?E=felhasznalok&M=megtekint&P=<?=$row['id']?>">Megtekint</a>
-                <a href="<?=BASE_URL?>?E=felhasznalok&M=szerkeszt&P=<?=$row['id']?>">Szerkeszt</a>
-                <a href="<?=BASE_URL?>?E=felhasznalok&M=torol&P=<?=$row['id']?>">Töröl</a>
+                <a href="<?=BASE_URL?>?E=irok&M=megtekint&P=<?=$row['id']?>">Megtekint</a>
+                <a href="<?=BASE_URL?>?E=irok&M=szerkeszt&P=<?=$row['id']?>">Szerkeszt</a>
+                <a href="<?=BASE_URL?>?E=irok&M=torol&P=<?=$row['id']?>">Töröl</a>
             </td>
         </tr>
         <?php endforeach; ?>
