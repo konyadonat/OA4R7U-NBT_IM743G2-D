@@ -1,10 +1,10 @@
 <?php
 
 define('DB_TYPE','mysql');
-define('DB_NAME','');
+define('DB_NAME','OA4R7U-NBT_IM743G2-D');
 define('DB_HOST','localhost');
 define('DB_USER','OA4R7U-NBT_IM743G2-D');
-define('DB_PASS','');
+define('DB_PASS','Y5Jnyk3pGvN4Wrpj');
 
 define('CHARSET','utf-8');
 define('Title', 'Webprog 2 beadandó');
