@@ -3,6 +3,7 @@
 <html>
     <head>
         <meta charset="<?=CHARSET ?>">
+        <meta name="<?=NAME?>" content="<?=CONTENT?>">
         <title><?=Title ?></title>
         
         <?php if(!empty(CSS)){ 

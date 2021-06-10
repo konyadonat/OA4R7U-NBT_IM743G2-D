@@ -7,6 +7,8 @@ define('DB_USER','OA4R7U-NBT_IM743G2-D');
 define('DB_PASS','Y5Jnyk3pGvN4Wrpj');
 
 define('CHARSET','utf-8');
+define('NAME','viewport');
+define('CONTENT','width=device-width, initial-scale=1, shrink-to-fit=no"');
 define('Title', 'Webprog 2 beadandó');
 define('CSS',['bootstarp.css','menu_style.css']);
 
