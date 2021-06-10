@@ -9,7 +9,7 @@
            $css_Item_Count = count(CSS); 
            
            for($i = 0;$i < $css_Item_Count;$i++){
-               echo '<link rel="stylesheet" type="text/css" href="'.CSS_DIR.CSS[$i].'">';
+              echo '<link rel="stylesheet" type="text/css" href="'.CSS_DIR.CSS[$i].'">';
            }
         }?>
         
