@@ -2,7 +2,7 @@
 
 define('CHARSET','utf-8');
 define('Title', 'Webprog 2 beadandó');
-define('CSS',['bootstarp.css']);
+define('CSS',['bootstarp.css','menu_style.css']);
 
 
 define('ROOT_DIR','./');
