@@ -1,5 +1,11 @@
 <?php
 
+define('DB_TYPE','mysql');
+define('DB_NAME','');
+define('DB_HOST','localhost');
+define('DB_USER','OA4R7U-NBT_IM743G2-D');
+define('DB_PASS','');
+
 define('CHARSET','utf-8');
 define('Title', 'Webprog 2 beadandó');
 define('CSS',['bootstarp.css','menu_style.css']);
