@@ -11,12 +11,7 @@ $menu = [
                         'href' => BASE_URL.'index.php?E=irok&M=lista',
                         'title' => 'Íróink listázása',
                         'extra' => []
-                    ],
-                    [
-                        'href' => BASE_URL.'index.php?E=irok&M=uj',
-                        'title' => 'Író felvétele',
-                        'extra' => ['target' => '_blank']
-                    ]
+                    ]  
                 ]
                 
             ]
