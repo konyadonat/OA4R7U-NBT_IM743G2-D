@@ -1,8 +1,10 @@
 <?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+$public_functions = ['lista','megtekint','torol','szerkeszt','hozzaad'];
+require_once CORE_DIR.'database_manager.php';
 
+function lista(){
+    $query = 'SELECT * FROM irok';
+    $result = select($query);
+    require_once VIEWS_DIR.'irok/lista.php';
+}
