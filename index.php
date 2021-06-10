@@ -4,7 +4,7 @@
     <head>
         <meta charset="<?=CHARSET ?>">
         <meta name="<?=NAME?>" content="<?=CONTENT?>">
-        <title><?=Title ?></title>
+        <title><?=Title?></title>
         
         <?php if(!empty(CSS)){ 
            $css_Item_Count = count(CSS); 
