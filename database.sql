@@ -12,3 +12,9 @@ VALUES('Arany János',1817,54);
 
 INSERT INTO irok(nev,szuletesiev,konyvekszama)
 VALUES('Petőfi Sándor',1823,70);
+
+INSERT INTO irok(nev,szuletesiev,konyvekszama)
+VALUES('Táncsics Mihály',1799,30);
+
+insert into irok(nev,szuletesiev,konyvekszama)
+VALUES('Fazekas Mihály',1766,13);
