@@ -1,2 +1,1 @@
-<h1>Webprogramozás 2 beadandó feladat</h1>
-<h2>Könyvtár</h2>
+<h1 class="display-4">Könyvtár</h1>
