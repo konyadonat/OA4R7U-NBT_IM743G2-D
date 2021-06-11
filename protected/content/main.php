@@ -1,13 +1,15 @@
+<div class="container-fluid">
 <h1 class="text-center">Projekt leírás</h1>
 </br>
 
-<h1 class="display-6">Elképzelés</h1>
 
-<p>
-    Az elképzelés egy olyan adatbázissal dolgozó könyvtár management weboldal készítese,
-    amely dinamikusan működik. <br/>
-    A projektben 5 adattábla van használatban, ezek az irok,konyv,konyvtar,kiado és a kolcsonzok. <br/>
-</p>
+
+    <h1 class="display-6">Elképzelés</h1>
+    <p>
+        Az elképzelés egy olyan adatbázissal dolgozó könyvtár management weboldal készítese,
+        amely dinamikusan működik. <br/>
+        A projektben 5 adattábla van használatban, ezek az irok,konyv,konyvtar,kiado és a kolcsonzok. <br/>
+    </p>
 
 <br/>
 
@@ -36,7 +38,8 @@
     Elkészítettem egy tervet az elképzelt adatmodellről. </br>
     <img class="img-thumbnail" width="500" src=<?=IMG_DIR.'/adatmodell.jpg'?>>
 </p>
-
+<br/>
+</div>
 <?php
 function lista(){
 }

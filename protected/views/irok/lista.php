@@ -1,3 +1,4 @@
+<div class="container-fluid">
 <br/>
 <h1 class="text-center">Adatbázisban tárolt írók/költők listája</h1>
 <br/>
@@ -31,3 +32,4 @@
     </tbody>    
 </table>
 <?php endif; ?>
+</div>
