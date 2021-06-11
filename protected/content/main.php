@@ -17,7 +17,7 @@
 
   <dt class="col-sm-3">konyv</dt>
   <dd class="col-sm-9">
-    E táblában található a könyvről származó adatok(könyv azonosító, címe, írója, kiadója neve, köny témája, kiadás éve).
+    E táblában található a könyvről származó adatok(könyv azonosító, kiadója azonosítója, író azonosítója, könyvtár azonosító, címe, köny témája, kiadás éve).
   </dd>
 
   <dt class="col-sm-3">konyvtar</dt>
@@ -31,6 +31,11 @@
     A könyv kölcsönzők adatai. (id, könyvid, név, irányító szám, cím). 
   </dd>
 </dl>
+<br/>
+<p>
+    Elkészítettem egy tervet az elképzelt adatmodellről. </br>
+    <img class="img-thumbnail" width="500" src=<?=IMG_DIR.'/adatmodell.jpg'?>>
+</p>
 
 <?php
 function lista(){
