@@ -13,12 +13,15 @@
             <th scope="col">Könyvtár neve</th>
             <th scope="col">Könyvtár irányítószáma </th>
             <th scope="col">Könyvtár címe</th>
+            <th scope="col">Műveletek</th>
         </tr>
     </thead>
     <tbody>
         <?php foreach ($result as &$row): ?>
         <tr>
             <td><?=$row['nev']?></td>
+            <td><?=$row['iranyitoszam']?></td>
+            <td><?=$row['cim']?></td>
             <td>
                 <a href="<?=BASE_URL?>?E=konyvtar&M=megtekint&P=<?=$row['id']?>">Megtekint</a>
                 <a href="<?=BASE_URL?>?E=konyvtar&M=szerkeszt&P=<?=$row['id']?>">Szerkeszt</a>
