@@ -23,7 +23,7 @@ $menu = [
                 'title' => 'Könyvek'
             ],
             [
-                'href' => BASE_URL.'index.php?E=kolcsonzok&M=lista',
+                'href' => BASE_URL.'index.php?E=kolcsonzo&M=lista',
                 'title' => 'Kölcsönzőink'
             ]
     
