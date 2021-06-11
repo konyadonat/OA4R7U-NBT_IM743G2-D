@@ -21,6 +21,7 @@ define('CSS_DIR',PUBLIC_DIR.'css/');
 define('CORE_DIR',PROTECTED_DIR.'core/');
 define('CONTENT_DIR',PROTECTED_DIR.'content/');
 define('FILES_DIR',PROTECTED_DIR.'files/');
+define('IMG_DIR',PUBLIC_DIR.'img/');
 
 define('START_CONTENT','main');
 
