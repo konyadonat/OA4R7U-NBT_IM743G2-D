@@ -2,17 +2,16 @@
 
 $menu = [
             [
-               'href' => '#',
+                'href' => BASE_URL.'index.php',
+                'title' => 'Kezdőlap'
+            ],
+    
+            [
+                'href' => BASE_URL.'index.php?E=irok&M=lista',
                 'title' => 'Íróink',
-                'extra' => [],
-                'childs' => 
-                [
-                    [
-                        'href' => BASE_URL.'index.php?E=irok&M=lista',
-                        'title' => 'Íróink listázása',
-                        'extra' => []
-                    ]  
-                ]
+                'extra' => []
+                
+                
                 
             ]
     
