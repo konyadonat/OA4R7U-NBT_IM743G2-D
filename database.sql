@@ -7,6 +7,43 @@ CREATE TABLE irok(
     konyvekszama INT NOT NULL DEFAULT 1
 );
 
+CREATE TABLE kiado(
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    nev VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE konyvtar(
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    nev VARCHAR(50) NOT NULL,
+    iranyitoszam int(4) NOT NULL,
+    cim VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE konyv(
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    kiadoid INT NOT NULL,
+    iroid INT NOT NULL,
+    konyvtarid int NOT NULL,
+    cim VARCHAR(50) NOT NULL,
+    tema VARCHAR(20) NOT NULL,
+    kiadaseve INT NOT NULL,
+    
+    CONSTRAINT fk_kiadoazon FOREIGN KEY(kiadoid) REFERENCES kiado(id),
+    CONSTRAINT fk_iroazon FOREIGN KEY(iroid) REFERENCES irok(id),
+    CONSTRAINT fk_konyvtarazon FOREIGN KEY(konyvtarid) REFERENCES konyvtar(id)
+    
+);
+
+CREATE TABLE kolcsonzo(
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    konyvid INT NOT NULL,
+    nev VARCHAR(40) NOT NULL,
+    iranyitoszam INT NOT NULL,
+    cim VARCHAR(50) NOT NULL,
+    
+    CONSTRAINT fk_konyvazon FOREIGN KEY(konyvid) REFERENCES konyv(id)
+);
+
 INSERT INTO irok(nev,szuletesiev,konyvekszama)
 VALUES('Arany János',1817,54);
 
