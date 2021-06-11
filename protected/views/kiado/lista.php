@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container">
 <br/>
 <h1 class="text-center">Adatbázisban tárolt kiadók listája</h1>
 <br/>
@@ -11,6 +11,7 @@
     <thead>
         <tr>
             <th scope="col">Kiadó neve</th>
+            <th scope="col">Műveletek</th>
         </tr>
     </thead>
     <tbody>
