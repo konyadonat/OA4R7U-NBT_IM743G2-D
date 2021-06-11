@@ -1,7 +1,7 @@
 <br/>
-<h1 class="text-center">Írók listája</h1>
+<h1 class="text-center">Adatbázisban tárolt írók/költők listája</h1>
 <br/>
-<h1 class="text-center"> <a href="<?=BASE_URL?>?E=irok&M=hozzaad">Hozzáadás</h1></a>
+<h1 class="text-left"> <a href="<?=BASE_URL?>?E=irok&M=hozzaad">Író felvétel</h1></a>
 
 <?php if($result == null || empty($result)): ?>
 <p>Nincs rögzítve rekord</p>
