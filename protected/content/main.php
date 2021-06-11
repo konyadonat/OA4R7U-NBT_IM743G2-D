@@ -1,4 +1,4 @@
-<h1>Kezdőoldal</h1>
+<h1 class="text-center">Kezdőoldal</h1>
 
 <?php
 
