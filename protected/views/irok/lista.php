@@ -24,7 +24,7 @@
             <td><?=$row['konyvekszama']?></td>
             <td>
                 <a href="<?=BASE_URL?>?E=irok&M=megtekint&P=<?=$row['id']?>">Megtekint</a>
-                <a href="<?=BASE_URL?>?E=irok&M=szerkeszt&P=<?=$row['id']?>">Szerkeszt</a>
+                <a target="_blank" href="<?=BASE_URL?>?E=irok&M=szerkeszt&P=<?=$row['id']?>">Szerkeszt</a>
                 <a href="<?=BASE_URL?>?E=irok&M=torol&P=<?=$row['id']?>">Töröl</a>
             </td>
         </tr>
