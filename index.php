@@ -1,8 +1,8 @@
-<?= require_once './protected/config/config.php'; ?>
+<?= require_once './protected/config/config.php';?>
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="<?=CHARSET ?>">
+        <meta charset="<?=CHARSET?>">
         <meta name="<?=NAME?>" content="<?=CONTENT?>">
         <title><?=Title?></title>
         
