@@ -83,9 +83,7 @@ function hozzaad(){
         echo $nev,$ev,$konyvekszama;
         $success= insert('INSERT INTO irok(nev,szuletesiev,konyvekszama)'
                 . ' VALUES(:nev,:szuletesiev,:konyvekszama)',
-                ['nev' => $nev,'szuletesiev' => $ev,'konyvekszama' => $konyvekszama]);
-        //$query ='INSERT INTO irok(nev,ev,konyvekszama)'
-        //        . 'VALUES(:nev,:ev,:konyvekszama)';       
+                ['nev' => $nev,'szuletesiev' => $ev,'konyvekszama' => $konyvekszama]);     
         
 }
 }
