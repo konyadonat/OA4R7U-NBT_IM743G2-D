@@ -30,3 +30,15 @@ function megtekint(){
     
     require_once VIEWS_DIR.'irok/reszletek.php';
 }
+
+function torol (){
+    $id = get_p();
+    $succes = delete('DELETE FROM irok WHERE id =:id',['id' =>$id]);
+    
+    if($succes ===true){
+        header('Location:'.BASE_URL.'?E=irok');
+    }
+    else{
+        die('Sikertelen törlés!');
+    }
+}
