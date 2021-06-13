@@ -70,7 +70,25 @@ function torol (){
 }
 
 function szerkeszt (){
-    
+    if(!filter_has_var(INPUT_POST,'submit') || 
+            filter_input(INPUT_POST, 'submit', FILTER_VALIDATE_INT)!=1){
+        require VIEWS_DIR.'konyv/szerkeszt.php';
+    }
+    else
+    {
+        $id = get_p();
+        $cim = filter_input(INPUT_POST, 'cim',FILTER_SANITIZE_STRING);
+        $tema = filter_input(INPUT_POST,'tema',FILTER_SANITIZE_STRING);
+        $kiadaseve = filter_input(INPUT_POST, 'kiadaseve',FILTER_SANITIZE_NUMBER_INT);
+        
+        $succes = update('UPDATE konyv SET cim=:cim, tema=:tema, kiadaseve=:kiadaseve WHERE id=:id',['id'=>$id,'cim'=>$cim,'tema'=>$tema,'kiadaseve'=>$kiadaseve]);
+        if($succes ===true){
+            header('Location:'.BASE_URL.'?E=konyv');
+        }
+        else{
+            die('Sikertelen szerkesztés!');
+        }
+    } 
 }
 function hozzaad(){
     if(!filter_has_var(INPUT_POST,'submit') || 
