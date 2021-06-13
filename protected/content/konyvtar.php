@@ -30,3 +30,16 @@ function megtekint(){
     
     require_once VIEWS_DIR.'konyvtar/reszletek.php';
 }
+
+function torol (){
+    $id = get_p();
+    $succes = delete('DELETE FROM konyvtar WHERE id =:id',['id' =>$id]);
+    
+    if($succes ===true){
+        header('Location:'.BASE_URL.'?E=konyvtar');
+    }
+    else{
+        die('Sikertelen törlés!');
+    }
+}
+
