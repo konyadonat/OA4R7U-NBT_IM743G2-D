@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container">
 <br/>
 <h1 class="text-center">Adatbázisban tárolt írók/költők listája</h1>
 <br/>
