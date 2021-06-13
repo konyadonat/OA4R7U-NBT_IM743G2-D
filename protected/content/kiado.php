@@ -29,3 +29,15 @@ function megtekint(){
     
     require_once VIEWS_DIR.'kiado/reszletek.php';
 }
+
+function torol (){
+    $id = get_p();
+    $succes = delete('DELETE FROM kiado WHERE id =:id',['id' =>$id]);
+    
+    if($succes ===true){
+        header('Location:'.BASE_URL.'?E=kiado');
+    }
+    else{
+        die('Sikertelen törlés!');
+    }
+}
