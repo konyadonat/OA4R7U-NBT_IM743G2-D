@@ -1,8 +1,6 @@
-<?php
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+<div class="container">
+    <h3>Kiadó azonosítója</h3>
+    <p><?=$result['id']?></p>
+    <h3>Kiadó neve</h3>
+    <p><?=$result['nev']?></p>
+</div>
