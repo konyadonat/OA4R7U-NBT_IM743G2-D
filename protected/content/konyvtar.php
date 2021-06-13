@@ -73,6 +73,19 @@ function szerkeszt (){
     
 }
 function hozzaad(){
-    
+    if(!filter_has_var(INPUT_POST,'submit') || 
+            filter_input(INPUT_POST, 'submit', FILTER_VALIDATE_INT)!=1){
+                require VIEWS_DIR.'konyvtar/uj.php';
+    }
+    else
+    {
+        
+        $nev = filter_input(INPUT_POST,'nev',FILTER_SANITIZE_STRING);
+        $iranyitoszam = filter_input(INPUT_POST, 'iranyitoszam',FILTER_SANITIZE_NUMBER_INT);
+        $cim = filter_input(INPUT_POST, 'cim',FILTER_SANITIZE_STRING);
+        $success= insert("INSERT INTO konyvtar(nev,iranyitoszam,cim) VALUES"
+                . " ('$nev','$iranyitoszam','$cim')");
+        header('Location:'.BASE_URL.'?E=konyvtar');
+    }
 }
 
