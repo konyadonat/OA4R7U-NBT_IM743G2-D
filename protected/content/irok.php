@@ -46,7 +46,7 @@ function torol (){
 function szerkeszt (){
     $id = get_p();
     
-    $succes = update('UPDATE irok SET nev=?, konyvekszama =? WHERE id=:id',['id'=>$id]);
+    $succes = update('UPDATE irok SET nev=:nev, konyvekszama =:konyvekszama WHERE id=:id',['id'=>$id]);
     if($succes ===true){
         header('Location:'.BASE_URL.'?E=irok');
     }
@@ -55,5 +55,24 @@ function szerkeszt (){
     }
 }
 function hozzaad(){
-    
+    if(!filter_has_var(INPUT_POST,'submit') || 
+            filter_input(INPUT_POST, 'submit', FILTER_VALIDATE_INT)!=1){
+                require VIEWS_DIR.'irok/uj.php';
+    }
+    else{
+        echo 'feldolgozás';
+        
+        $nev = filter_input(INPUT_POST, 'nev',FILTER_SANITIZE_STRING);
+        $ev = filter_input(INPUT_POST,'szuletesiev',FILTER_SANITIZE_NUMBER_INT);
+        $konyvekszama = filter_input(INPUT_POST,'konyvekszama',FILTER_SANITIZE_NUMBER_INT);
+
+        
+        echo $nev,$ev,$konyvekszama;
+        $success= insert('INSERT INTO irok(nev,szuletesiev,konyvekszama)'
+                . ' VALUES(:nev,:szuletesiev,:konyvekszama)',
+                ['nev' => $nev,'szuletesiev' => $ev,'konyvekszama' => $konyvekszama]);
+        //$query ='INSERT INTO irok(nev,ev,konyvekszama)'
+        //        . 'VALUES(:nev,:ev,:konyvekszama)';       
+        
+}
 }
