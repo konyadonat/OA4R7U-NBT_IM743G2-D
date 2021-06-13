@@ -108,7 +108,7 @@ function hozzaad(){
         $success= insert('INSERT INTO irok(nev,szuletesiev,konyvekszama)'
                 . ' VALUES(:nev,:szuletesiev,:konyvekszama)',
                 ['nev' => $nev,'szuletesiev' => $ev,'konyvekszama' => $konyvekszama]);     
-        echo'Sikeres felvétel!';
+        header('Location:'.BASE_URL.'?E=irok');
         
     }
 }
