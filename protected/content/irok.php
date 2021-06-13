@@ -44,7 +44,15 @@ function torol (){
 }
 
 function szerkeszt (){
+    $id = get_p();
     
+    $succes = update('UPDATE irok SET nev=?, konyvekszama =? WHERE id=:id',['id'=>$id]);
+    if($succes ===true){
+        header('Location:'.BASE_URL.'?E=irok');
+    }
+    else{
+        die('Sikertelen szerkesztés!');
+    }
 }
 function hozzaad(){
     

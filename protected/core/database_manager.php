@@ -43,3 +43,13 @@ function delete($query, $params = []){
     
     return $succes;
 }
+function update($query, $params =[]){
+    $connection = get_connection();
+    $statement = $connection->prepare($query);
+    $succes = $statement->execute($params);
+    
+    $statement ->closeCursor();
+    $connection = null;
+    
+    return $succes;
+}
