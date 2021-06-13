@@ -68,7 +68,23 @@ function torol (){
 }
 
 function szerkeszt (){
-    
+    if(!filter_has_var(INPUT_POST,'submit') || 
+            filter_input(INPUT_POST, 'submit', FILTER_VALIDATE_INT)!=1){
+        require VIEWS_DIR.'kiado/szerkeszt.php';
+    }
+    else
+    {
+        $id = get_p();
+        $nev = filter_input(INPUT_POST, 'nev',FILTER_SANITIZE_STRING);
+
+        $succes = update('UPDATE kiado SET nev=:nev WHERE id=:id',['id'=>$id,'nev'=>$nev]);
+        if($succes ===true){
+            header('Location:'.BASE_URL.'?E=kiado');
+        }
+        else{
+            die('Sikertelen szerkesztés!');
+        }
+    }          
 }
 function hozzaad(){
     if(!filter_has_var(INPUT_POST,'submit') || 
