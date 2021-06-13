@@ -46,10 +46,10 @@ function delete($query, $params = []){
 function update($query, $params =[]){
     $connection = get_connection();
     $statement = $connection->prepare($query);
-    $succes = $statement->execute($params);
+    $succes = $statement ->execute($params);
     
-    $statement ->closeCursor();
-    $connection = null;
+    $statement -> closeCursor();
+    $connection =null;
     
     return $succes;
 }
