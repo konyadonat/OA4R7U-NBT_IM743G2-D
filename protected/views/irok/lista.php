@@ -18,7 +18,7 @@
         </tr>
     </thead>
     <tbody>
-        <?php foreach ($result as &$row): ?>
+        <?php foreach ($result as $row): ?>
         <tr>
             <td><?=$row['nev']?></td>
             <td><?=$row['szuletesiev']?></td>
