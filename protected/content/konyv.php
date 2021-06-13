@@ -31,3 +31,16 @@ function megtekint(){
     require_once VIEWS_DIR.'konyv/reszletek.php';
 }
 
+function torol (){
+    $id = get_p();
+    $succes = delete('DELETE FROM konyv WHERE id =:id',['id' =>$id]);
+    
+    if($succes ===true){
+        header('Location:'.BASE_URL.'?E=konyv');
+    }
+    else{
+        die('Sikertelen törlés!');
+    }
+}
+
+
