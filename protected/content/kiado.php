@@ -1,6 +1,21 @@
 <?php
-$public_functions = ['lista','megtekint','torol','szerkeszt','hozzaad'];
+$public_functions = ['lista','megtekint','torol','szerkeszt','hozzaad','letolt'];
 require_once CORE_DIR.'database_manager.php';
+
+function letolt(){
+    
+    $query = 'SELECT * from kiado';
+    $result = select($query);
+    
+    $file = fopen('kiado.csv', 'w');
+    
+    foreach ($result as $line) {
+        fputcsv($file, $line);
+    }
+    fclose($file);
+    
+    require_once VIEWS_DIR.'kiado/lista.php';
+}
 
 function lista(){
     $query = 'SELECT * FROM kiado';

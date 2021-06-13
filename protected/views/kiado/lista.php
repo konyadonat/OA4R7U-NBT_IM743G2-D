@@ -3,6 +3,7 @@
 <h1 class="text-center">Adatbázisban tárolt kiadók listája</h1>
 <br/>
 <h1 class="text-left"> <a href="<?=BASE_URL?>?E=kiado&M=hozzaad">Kiadó felvétel</h1></a>
+<h1 class="text-left"> <a href="<?=BASE_URL?>?E=kiado&M=letolt">Adatbázis letöltése</h1></a>
 
 <?php if($result == null || empty($result)): ?>
 <p>Nincs rögzítve rekord</p>
