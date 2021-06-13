@@ -8,7 +8,7 @@
         </div>
         <div class="form-group">
             <label for="nev">Kölcsöznő neve: </label>
-            <input class="form-control" type="nev" name="szuletesiev" required="required" id="nev" minlength="6" maxlength="40"/> <br/>
+            <input class="form-control" type="text" name="nev" required="required" id="neve" /> <br/>
         </div>
         <div class="form-group">
             <label for="iranyitoszam">Kölcsönző irányítószáma: </label>

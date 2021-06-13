@@ -79,14 +79,13 @@ function hozzaad(){
     }
     else{
         $konyvid = filter_input(INPUT_POST,'konyvid',FILTER_SANITIZE_NUMBER_INT);
-        $nev = filter_input(INPUT_POST, 'nev',FILTER_SANITIZE_STRING);
+        $nev = filter_input(INPUT_POST,'nev');
         $iranyitoszam = filter_input(INPUT_POST,'iranyitoszam',FILTER_SANITIZE_NUMBER_INT);
         $cim = filter_input(INPUT_POST,'cim',FILTER_SANITIZE_STRING);
 
         echo $konyvid,$nev,$iranyitoszam,$cim;
-        $success= insert('INSERT INTO kolcsonzo(konyvid,nev,iranyitoszam,cim)'
-                . 'VALUES(:konyvid,:nev,:iranyitoszam,:cim)',
-                ['konyvid'=>$konyvid,'nev'=>$nev,'iranyitoszam'=>$iranyitoszam,'cim'=>$cim]);
+        $success= insert("INSERT INTO kolcsonzo(konyvid,nev,iranyitoszam,cim) VALUES"
+                . " ('$konyvid', '$nev', '$iranyitoszam','$cim')");
         echo 'Sikeres adatfeltöltés!';
         
     }
