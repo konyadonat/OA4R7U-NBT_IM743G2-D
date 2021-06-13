@@ -99,17 +99,16 @@ function hozzaad(){
                 require VIEWS_DIR.'irok/uj.php';
     }
     else{
-        echo 'feldolgozás';
         
         $nev = filter_input(INPUT_POST, 'nev',FILTER_SANITIZE_STRING);
         $ev = filter_input(INPUT_POST,'szuletesiev',FILTER_SANITIZE_NUMBER_INT);
         $konyvekszama = filter_input(INPUT_POST,'konyvekszama',FILTER_SANITIZE_NUMBER_INT);
 
         
-        echo $nev,$ev,$konyvekszama;
         $success= insert('INSERT INTO irok(nev,szuletesiev,konyvekszama)'
                 . ' VALUES(:nev,:szuletesiev,:konyvekszama)',
                 ['nev' => $nev,'szuletesiev' => $ev,'konyvekszama' => $konyvekszama]);     
+        echo'Sikeres felvétel!';
         
     }
 }
