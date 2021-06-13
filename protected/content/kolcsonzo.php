@@ -70,14 +70,33 @@ function torol (){
 }
 
 function szerkeszt (){
-    
+  if(!filter_has_var(INPUT_POST,'submit') || 
+            filter_input(INPUT_POST, 'submit', FILTER_VALIDATE_INT)!=1){
+        require VIEWS_DIR.'kolcsonzo/szerkeszt.php';
+    }
+    else
+    {
+        $id = get_p();
+        $nev = filter_input(INPUT_POST,'nev');
+        $iranyitoszam = filter_input(INPUT_POST,'iranyitoszam',FILTER_SANITIZE_NUMBER_INT);
+        $cim = filter_input(INPUT_POST,'cim',FILTER_SANITIZE_STRING);
+        
+        $succes = update('UPDATE kolcsonzo SET nev=:nev, iranyitoszam =:iranyitoszam, cim =:cim WHERE id=:id',['id'=>$id,'nev'=>$nev,'iranyitoszam'=>$iranyitoszam,'cim'=>$cim]);
+        if($succes ===true){
+            header('Location:'.BASE_URL.'?E=kolcsonzo');
+        }
+        else{
+            die('Sikertelen szerkesztés!');
+        }  
+}
 }
 function hozzaad(){
     if(!filter_has_var(INPUT_POST,'submit') || 
             filter_input(INPUT_POST, 'submit', FILTER_VALIDATE_INT)!=1){
                 require VIEWS_DIR.'kolcsonzo/uj.php';
     }
-    else{
+    else
+    {
         $konyvid = filter_input(INPUT_POST,'konyvid',FILTER_SANITIZE_NUMBER_INT);
         $nev = filter_input(INPUT_POST,'nev');
         $iranyitoszam = filter_input(INPUT_POST,'iranyitoszam',FILTER_SANITIZE_NUMBER_INT);
@@ -86,7 +105,6 @@ function hozzaad(){
         echo $konyvid,$nev,$iranyitoszam,$cim;
         $success= insert("INSERT INTO kolcsonzo(konyvid,nev,iranyitoszam,cim) VALUES"
                 . " ('$konyvid', '$nev', '$iranyitoszam','$cim')");
-        echo 'Sikeres adatfeltöltés!';
-        
+        header('Location:'.BASE_URL.'?E=kolcsonzo');
     }
 }
