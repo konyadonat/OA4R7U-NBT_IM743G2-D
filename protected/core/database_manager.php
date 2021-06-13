@@ -53,3 +53,13 @@ function update($query, $params =[]){
     
     return $succes;
 }
+function insert($query, $params = []){
+    $connection = get_connection();
+    $statement = $connection->prepare($query);
+    $succes = $statement ->execute($params);
+    
+    $statement -> closeCursor();
+    $connection =null;
+    
+    return $succes;
+}
