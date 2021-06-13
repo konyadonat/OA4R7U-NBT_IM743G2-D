@@ -41,3 +41,10 @@ function torol (){
         die('Sikertelen törlés!');
     }
 }
+
+function szerkeszt (){
+    
+}
+function hozzaad(){
+    
+}

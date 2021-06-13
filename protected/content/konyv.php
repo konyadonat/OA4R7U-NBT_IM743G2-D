@@ -43,4 +43,11 @@ function torol (){
     }
 }
 
+function szerkeszt (){
+    
+}
+function hozzaad(){
+    
+}
+
 
