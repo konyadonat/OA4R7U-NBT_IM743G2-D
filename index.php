@@ -1,4 +1,4 @@
-<?= require_once './protected/config/config.php';?>
+<?php require_once './protected/config/config.php';?>
 <!DOCTYPE html>
 <html>
     <head>
