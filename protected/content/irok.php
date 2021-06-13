@@ -50,18 +50,19 @@ function szerkeszt (){
             filter_input(INPUT_POST, 'submit', FILTER_VALIDATE_INT)!=1){
         require VIEWS_DIR.'irok/szerkeszt.php';
     }
-    else{
+    else
+    {
         $id = get_p();
-    $nev = filter_input(INPUT_POST, 'nev',FILTER_SANITIZE_STRING);
-    $konyvekszama = filter_input(INPUT_POST,'konyvekszama',FILTER_SANITIZE_NUMBER_INT);
+        $nev = filter_input(INPUT_POST, 'nev',FILTER_SANITIZE_STRING);
+        $konyvekszama = filter_input(INPUT_POST,'konyvekszama',FILTER_SANITIZE_NUMBER_INT);
 
-    $succes = update('UPDATE irok SET nev=:nev, konyvekszama =:konyvekszama WHERE id=:id',['id'=>$id,'nev'=>$nev,'konyvekszama'=>$konyvekszama]);
-    if($succes ===true){
-        header('Location:'.BASE_URL.'?E=irok');
-    }
-    else{
-        die('Sikertelen szerkesztés!');
-    }
+        $succes = update('UPDATE irok SET nev=:nev, konyvekszama =:konyvekszama WHERE id=:id',['id'=>$id,'nev'=>$nev,'konyvekszama'=>$konyvekszama]);
+        if($succes ===true){
+            header('Location:'.BASE_URL.'?E=irok');
+        }
+        else{
+            die('Sikertelen szerkesztés!');
+        }
     }          
     
     
