@@ -1,9 +1,6 @@
-<div class="container-fluid">
+<div class="container">
 <h1 class="text-center">Projekt leírás</h1>
 </br>
-
-
-
     <h1 class="display-6">Elképzelés</h1>
     <p>
         Az elképzelés egy olyan adatbázissal dolgozó könyvtár management weboldal készítese,
