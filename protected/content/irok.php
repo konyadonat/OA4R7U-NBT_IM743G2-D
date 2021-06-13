@@ -85,5 +85,5 @@ function hozzaad(){
                 . ' VALUES(:nev,:szuletesiev,:konyvekszama)',
                 ['nev' => $nev,'szuletesiev' => $ev,'konyvekszama' => $konyvekszama]);     
         
-}
+    }
 }
