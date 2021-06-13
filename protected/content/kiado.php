@@ -71,5 +71,16 @@ function szerkeszt (){
     
 }
 function hozzaad(){
-    
+    if(!filter_has_var(INPUT_POST,'submit') || 
+            filter_input(INPUT_POST, 'submit', FILTER_VALIDATE_INT)!=1){
+                require VIEWS_DIR.'kiado/uj.php';
+    }
+    else
+    {
+        
+        $nev = filter_input(INPUT_POST,'nev',FILTER_SANITIZE_STRING);
+        $success= insert("INSERT INTO kiado(nev) VALUES"
+                . " ('$nev')");
+        header('Location:'.BASE_URL.'?E=kiado');
+    }
 }
