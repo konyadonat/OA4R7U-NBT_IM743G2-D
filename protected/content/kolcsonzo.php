@@ -30,3 +30,15 @@ function megtekint(){
     
     require_once VIEWS_DIR.'kolcsonzo/reszletek.php';
 }
+
+function torol (){
+    $id = get_p();
+    $succes = delete('DELETE FROM kolcsonzo WHERE id =:id',['id' =>$id]);
+    
+    if($succes ===true){
+        header('Location:'.BASE_URL.'?E=kolcsonzo');
+    }
+    else{
+        die('Sikertelen törlés!');
+    }
+}
