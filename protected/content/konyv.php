@@ -73,7 +73,23 @@ function szerkeszt (){
     
 }
 function hozzaad(){
-    
+    if(!filter_has_var(INPUT_POST,'submit') || 
+            filter_input(INPUT_POST, 'submit', FILTER_VALIDATE_INT)!=1){
+                require VIEWS_DIR.'konyv/uj.php';
+    }
+    else
+    {
+        $kiadoid=filter_input(INPUT_POST,'kiadoid', FILTER_SANITIZE_NUMBER_INT);
+        $iroid=filter_input(INPUT_POST,'iroid', FILTER_SANITIZE_NUMBER_INT);
+        $konyvtarid = filter_input(INPUT_POST,'konyvtarid', FILTER_SANITIZE_NUMBER_INT);
+        $cim = filter_input(INPUT_POST, 'cim',FILTER_SANITIZE_STRING);
+        $tema = filter_input(INPUT_POST,'tema',FILTER_SANITIZE_STRING);
+        $kiadaseve = filter_input(INPUT_POST, 'kiadaseve',FILTER_SANITIZE_NUMBER_INT);
+        
+        $success= insert("INSERT INTO konyv(kiadoid,iroid,konyvtarid,cim,tema,kiadaseve) VALUES"
+                . " ('$kiadoid','$iroid','$konyvtarid','$cim','$tema','$kiadaseve')");
+        header('Location:'.BASE_URL.'?E=konyv');
+    }
 }
 
 
