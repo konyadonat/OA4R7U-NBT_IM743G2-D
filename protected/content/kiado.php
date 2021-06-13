@@ -3,15 +3,25 @@ $public_functions = ['lista','megtekint','torol','szerkeszt','hozzaad','letolt']
 require_once CORE_DIR.'database_manager.php';
 
 function letolt(){
+    $host = "localhost";
+    $username = "OA4R7U-NBT_IM743G2-D";
+    $password = "Y5Jnyk3pGvN4Wrpj";
+    $dbname = "OA4R7U-NBT_IM743G2-D";
     
+    $connection = mysqli_connect($host,$username,$password,$dbname);
+    if(!$connection){
+        die('Kapcsolódási hiba!');
+    }  
     $query = 'SELECT * from kiado';
-    $result = select($query);
+    $result = mysqli_query($connection,$query);
     
     $file = fopen('kiado.csv', 'w');
     
-    foreach ($result as $line) {
-        fputcsv($file, $line);
+    while($sor = mysqli_fetch_assoc($result))
+    {
+        fputcsv($file, $sor);
     }
+
     fclose($file);
     
     require_once VIEWS_DIR.'kiado/lista.php';

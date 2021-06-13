@@ -1,8 +1,9 @@
-<div class="container-fluid">
+<div class="container">
 <br/>
 <h1 class="text-center">Adatbázisban tárolt könyvtárak listája</h1>
 <br/>
 <h1 class="text-left"> <a href="<?=BASE_URL?>?E=konyvtar&M=hozzaad">Könyvtár felvétel</h1></a>
+<h1 class="text-left"> <a href="<?=BASE_URL?>?E=konyvtar&M=letolt">Adatbázis letöltése</h1></a>
 
 <?php if($result == null || empty($result)): ?>
 <p>Nincs rögzítve rekord</p>
@@ -17,7 +18,7 @@
         </tr>
     </thead>
     <tbody>
-        <?php foreach ($result as &$row): ?>
+        <?php foreach ($result as $row): ?>
         <tr>
             <td><?=$row['nev']?></td>
             <td><?=$row['iranyitoszam']?></td>
