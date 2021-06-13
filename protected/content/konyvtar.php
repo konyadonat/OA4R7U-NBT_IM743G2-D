@@ -22,7 +22,7 @@ function get_p(){
 function megtekint(){
     $id = get_p();
     
-    $result = select('SELECT * konyvtar kiado WHERE id =:id',TRUE, ['id' => $id]);
+    $result = select('SELECT * from konyvtar WHERE id =:id',TRUE, ['id' => $id]);
     
     if($result === false){
         die('Nincs ilyen rekord!');
